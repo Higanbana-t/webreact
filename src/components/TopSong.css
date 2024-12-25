@@ -1,0 +1,171 @@
+/* Cập nhật cho phần top songs */
+body {
+    font: 12px / 1.4 Inter, sans-serif;
+}
+
+.topsong {
+    display: flex;
+    flex-direction: column; /* Đảm bảo rằng phần tiêu đề và nội dung được xếp theo chiều dọc */
+    
+    position: relative;
+    height: 307px; /* Cho phép chiều cao thay đổi linh động */
+}
+
+.topsong-title {
+    margin-bottom: 24px;
+    text-align: left; /* Căn giữa tiêu đề */
+    height: 31px;
+}
+
+.mixedSelectionModule__titleText {
+    height: 31px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+/* Phần chứa các bài hát */
+.topsong-content {
+    display: flex;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    overflow-y: hidden; /* Ẩn cuộn dọc */
+    gap: 20px;
+    padding-bottom: 10px; /* Giảm khoảng cách phía dưới */
+    height: 256px; /* Chiều cao của phần chứa các bài hát */
+    white-space: nowrap; /* Đảm bảo các phần tử không xuống dòng */
+    width: 880px;
+    margin-left: 6px;
+}
+
+.song-container {
+    display: flex;
+    flex-wrap: nowrap; /* Đảm bảo các bài hát nằm ngang */
+    gap: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.song-item {
+    width: 173px;
+    height: 251px;
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+}
+
+.song-item:hover {
+    transform: scale(1.05);
+}
+
+.song-item h2 {
+    color: #333;
+}
+
+.song-item p {
+    font-size: 12px;
+    color: #666;
+}
+
+.song-image {
+    width: 173px;
+    height: 173px;
+    overflow: hidden;
+}
+
+.song-image img {
+    width: 173px;
+    height: 173px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.song-image:hover .play-button {
+  display: flex;
+}
+
+.song-info {
+    padding-top: 10px;
+}
+
+.song-info a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.song-info a:hover {
+    text-decoration: underline;
+}
+
+.song-name {
+    font-size: 14px;
+    margin: 0px;
+}
+
+/* Nút cuộn trái và phải */
+.scroll-buttons {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: none; /* Đảm bảo các nút không chiếm không gian tương tác */
+}
+
+.scroll-left, .scroll-right {
+    background: rgb(255, 255, 255); /* Màu nền cho nút cuộn */
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto; /* Đảm bảo nút có thể được nhấn */
+}
+
+.scroll-left:hover, .scroll-right:hover {
+    border: 1px solid #ff4d00;
+}
+
+.scroll-left {
+    position: absolute;
+    left: 10px; /* Đảm bảo nút cuộn trái luôn ở phía bên trái */
+}
+
+.scroll-right {
+    position: absolute;
+    right: 10px; /* Đảm bảo nút cuộn phải luôn ở phía bên phải */
+}
+
+/* Ẩn nút cuộn trái khi ở đầu */
+.scroll-left.hidden {
+    display: none;
+}
+
+/* Ẩn nút cuộn phải khi ở cuối */
+.scroll-right.hidden {
+    display: none;
+}

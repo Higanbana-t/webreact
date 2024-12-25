@@ -1,0 +1,203 @@
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: '10px 20px';
+    
+    background-color: #333;
+    height: 46px;
+    
+}
+.logo img{
+    height: 46px;
+    width: 100%;
+}
+.logo{
+    height:100%;
+    margin-left: 140px;
+    width: 69px;
+}
+.menu{
+
+    background-color: #333;
+    height: 100%;
+    width: 312px;
+}
+.menuList{
+    list-style-type: none; /* Loại bỏ dấu chấm tròn mặc định */
+    padding: 0; /* Loại bỏ padding mặc định */
+    margin: 0; /* Loại bỏ margin mặc định */
+    display: flex; /* Hiển thị các menu item theo hàng ngang */
+    
+
+}
+.menuItem {
+    display: flex; /* Biến mỗi menu item thành một flex container */
+    justify-content: center; /* Căn chữ theo chiều ngang */
+    align-items: center; /* Căn chữ theo chiều dọc */
+    cursor: pointer; /* Hiển thị con trỏ khi hover */
+    font-weight: 100; /* Làm chữ đậm */
+    transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+    /*border: 1px solid #c40404; /* Viền đỏ */
+    width: 104px; /* Chiều rộng cố định */
+    height: 46px; /* Chiều cao cố định */
+    color: #fff; /* Màu chữ mặc định */
+    border-right: 1px solid #000000; /* Viền phân cách giữa các menu item */
+    font-family: Inter, sans-serif;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+.menuItem.active {
+    background-color: #000000; /* Màu nền khi được chọn */
+    color: #fff; /* Màu chữ khi được chọn */
+} 
+.search{
+    padding: 9px 10px 8px;
+    height: 46px;
+    position: relative;
+    
+    display: flex;
+}
+.search input{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 360px;
+    height: 27px;
+    padding-right: 20px;
+    background: #e5e5e5;
+    outline: 0;
+    border: 0;
+    padding: 5px 7px;
+    border-radius: 4px;
+}
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 340px; /* Khoảng cách từ cạnh trái */
+    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+    font-size: 20px;
+    color: #3b3838;
+    pointer-events: none; /* Để tránh icon can thiệp vào việc nhập liệu */
+    
+  }
+.uploadButton {
+    margin-left: 20px;
+  
+    background-color: #333;
+    color: #e7dcdc;
+    border: none;
+
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+.uploadButton:hover {
+    color: #ffffff;
+  }  
+ 
+/* CSS cho Popover */
+.moreOptionsIcon {
+    width: 30px;  /* Kích thước của icon */
+    height: 30px;
+    cursor: pointer;  /* Thêm hiệu ứng khi hover */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border-radius: 50%;  /* Làm cho hình ảnh tròn */
+  }
+
+
+.ant-popover-inner {
+    border-radius: 0px; /* Làm cho popover có góc bo tròn */
+    color: #c40404;
+  }
+
+  .ant-popover-inner-content {
+    padding: 10px; /* Thêm padding vào nội dung */
+    background-color: #ffffff; /* Màu nền của popover */
+  }
+  
+  .ant-popover-title {
+    font-weight: bold; /* Đổi kiểu chữ tiêu đề */
+    color: #7d0505; /* Màu tiêu đề */
+  }
+  
+  .ant-popover-arrow {
+    display: none; /* Ẩn mũi tên của popover */
+  }
+  
+  .popoverList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .popoverList li {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #ffffff;
+  }
+  
+  .popoverList li:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover */
+  }
+  
+  .popoverList li:active {
+    background-color: #d9d9d9; /* Màu nền khi nhấn */
+  }
+
+
+.anticon{
+    padding-top: 10px;
+    color: #ffffff;
+    width: 20px;
+    height: 20px;
+}
+
+
+.signupButton{
+  background-color: #f50;
+  border-color: #f50;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  height: 26px;
+  margin: 0;
+  padding: 2px 11px 2px 10px;
+    
+  border-radius: 3px;
+  
+  cursor: pointer;
+    
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  font-family: Inter, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  vertical-align: initial;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+.ant-popover-inner-content ul {
+
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 40px;
+ 
+}
+.ant-popover-inner-content li {
+  height: 30px;
+}
+.ant-popover-inner-content button {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border: none;
+  padding: 10px;
+  
+  cursor: pointer;
+  font-size: 16px;
+  
+}
